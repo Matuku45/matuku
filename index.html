@@ -60,13 +60,15 @@
             let newPassword = reserting;
             let scName = document.getElementById("scNme").value;
             let emailing = document.getElementById("ema").value;
-
+                if(password ==  userPassword){
             document.getElementById("result").innerHTML = "Name: " + " Hunadi: Mapoulo " + "<br>" +
                 "Second name: " + scName + "<br>" +
                 "Email: " + emailing;
+                }
         }
     </script>
    
+   <br>
    <br>
    
     <div id="result"></div>
