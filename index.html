@@ -7,11 +7,6 @@
     <style>
         body {
             background-color: yellow;
-         
-     
-          
-    
-      
         }
 
         form {
@@ -60,20 +55,20 @@
             if (noOfCount === 3) {
                 alert("Your login has expired");
                 reserting = prompt("Reset your password");
-            } else {
-                alert("You have successfully logged in. Welcome back, " + name);
-            }
+            } 
 
             let newPassword = reserting;
             let scName = document.getElementById("scNme").value;
             let emailing = document.getElementById("ema").value;
 
-            document.getElementById("result").innerHTML = "Name: " + name + "<br>" +
+            document.getElementById("result").innerHTML = "Name: " + " Hunadi: Mapoulo " + "<br>" +
                 "Second name: " + scName + "<br>" +
                 "Email: " + emailing;
         }
     </script>
-
+   
+   <br>
+   
     <div id="result"></div>
 
 </body>
