@@ -1,8 +1,81 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+   
+  
+    <style>
+        body {
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-<h> Please read the following form for clarification </h>
-<form>
-<label for = "" > Enter your name </label>
-<input type = "text"   placeholder = "name" >
-</form>
+        form {
+            text-align: left;
+        }
+    </style>
+</head>
 
+<body>
+
+    <h2>Please read the following form for clarification</h2>
+
+    <div>
+        <form>
+            <label for="name">Enter your name</label><br>
+            <input type="text" id="name" placeholder="Name"><br>
+
+            <label for="scNme">Enter your second name</label><br>
+            <input type="text" id="scNme" placeholder="Second Name"><br>
+
+            <label for="ema">Enter your email</label><br>
+            <input type="email" id="ema" placeholder="Email"><br>
+
+            <label for="pass">Enter your password</label><br>
+            <input type="password" id="pass" placeholder="Password"><br>
+        </form>
+
+        <button onclick="myFunction()">Click to submit the form</button>
+    </div>
+
+    <script>
+        function myFunction() {
+            let password = "Mapoulo";
+            let userPassword = document.getElementById("pass").value;
+            let name = document.getElementById("name").value;
+            let noOfCount = 0;
+            let reserting = 0;
+
+            if (password === userPassword) {
+                alert("Correct password");
+            } else {
+                alert("Please enter the correct password, " + name);
+                noOfCount++;
+            }
+
+            if (noOfCount === 3) {
+                alert("Your login has expired");
+                reserting = prompt("Reset your password");
+            } else {
+                alert("You have successfully logged in. Welcome back, " + name);
+            }
+
+            let newPassword = reserting;
+            let scName = document.getElementById("scNme").value;
+            let emailing = document.getElementById("ema").value;
+
+            document.getElementById("result").innerHTML = "Name: " + name + "<br>" +
+                "Second name: " + scName + "<br>" +
+                "Email: " + emailing;
+        }
+    </script>
+
+    <div id="result"></div>
+
+</body>
+
+</html>
