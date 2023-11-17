@@ -6,12 +6,15 @@
   
     <style>
         body {
-            background-color: red;
+            background-color: yellow;
         }
 
         form {
             text-align: center;
         }
+       #result{
+    text-align: center;
+          }
     </style>
 </head>
 
@@ -62,11 +65,16 @@
             let scName = document.getElementById("scNme").value;
             let emailing = document.getElementById("ema").value;
                 if(password ==  userPassword){
-            document.getElementById("result").innerHTML = "Name: " + " Emanuel ndou " + "<br>" +
+            document.getElementById("result").innerHTML = "Name: " + name + "<br>" +
                 "Second name: " + scName + "<br>" +
                 "Email: " + emailing;
+                   window.alert("Welecome Hunadi Mapoulo " );
+                    window.alert("Practice makes perfect " );
                 }
         }
+   
+
+       
     </script>
    
    <br>
